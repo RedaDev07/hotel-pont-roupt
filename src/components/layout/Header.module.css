@@ -259,20 +259,24 @@
   margin-bottom: 60px;
 }
 
+/* Les boutons d'action (Réserver / Nous contacter dans le menu) */
 .whiteRectBtn {
-  background-color: var(--color-beige-zen); 
-  color: var(--color-anthracite); 
+  background-color: #FF8500; /* Un beau blanc cassé/beige très clair forcé */
+  color: #F8F5F0; /* Un texte presque noir pour qu'il soit super lisible */
+  border: 1px solid #F8F5F0;
   padding: 12px 35px;
   text-decoration: none;
-  font-family: var(--font-titre);
+  font-family: 'Playfair Display', serif; /* Typo élégante forçée */
   font-style: italic;
   font-size: 18px;
+  text-align: center;
   transition: all 0.3s ease;
 }
 
 .whiteRectBtn:hover {
-  background-color: var(--color-orange);
-  color: var(--color-blanc);
+  background-color: #FF8500; /* Ton orange boutique au survol */
+  color: #FFFFFF;
+  border-color: #FF8500;
 }
 
 .menuFooterLeft {
@@ -341,6 +345,13 @@
   display: none; /* Toujours caché sur ordinateur */
 }
 
+/* Bouton Fidélité dans le menu (Caché sur ordinateur) */
+.loyaltyBtnMobileMenu {
+  display: none;
+}
+
+
+
 /* =========================================
    RESPONSIVE MOBILE (TABLETTES & SMARTPHONES)
    ========================================= */
@@ -358,7 +369,7 @@
     font-size: 13px; 
   }
 
-  /* Pour que le logo reste parfaitement au centre sans les boutons de droite */
+  /* Centrage absolu du logo sans les boutons de droite */
   .logoCenter {
     position: absolute;
     left: 50%;
@@ -370,12 +381,12 @@
     margin-left: 0; 
   }
 
-  /* --- Cacher les boutons du haut --- */
+  /* --- Cacher les boutons du haut sur mobile --- */
   .headerRight {
-    display: none; /* On vide complètement la droite de l'en-tête */
+    display: none; 
   }
 
-  /* --- NOUVEAU : Afficher la barre de réservation en bas --- */
+  /* --- Barre de réservation bordeaux fixée en bas --- */
   .mobileBottomBookBtn {
     display: flex; 
     justify-content: center;
@@ -385,23 +396,27 @@
     left: 0;
     width: 100%;
     height: 65px;
-    background-color: #FF8500; 
+    background-color: #7A1D22; /* Rouge bordeaux */
     color: #FFFFFF;
-    font-family: 'Playfair Display', serif; /* Typo Serif */
+    font-family: 'Playfair Display', serif;
     font-size: 24px;
-    font-style: italic; /* Italique comme sur la capture */
+    font-style: italic;
     text-decoration: none;
-    z-index: 90; /* Par-dessus le site, mais sous le menu ouvert */
+    z-index: 90;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
   }
 
-  /* --- Le Menu Plein Écran --- */
+  /* --- LE MENU PLEIN ÉCRAN (AVEC LE SCROLL ACTIVÉ) --- */
   .menuOverlay {
-    padding: 30px;
+    padding: 30px 20px;
+    overflow-y: auto; /* CRUCIAL : C'est ceci qui permet de scroller sur téléphone ! */
+    padding-bottom: 100px; /* Ajoute de l'espace en bas pour ne pas être caché par la barre bordeaux */
   }
   
   .menuBody {
     flex-direction: column; 
+    height: auto; /* Laisse le menu s'agrandir */
+    min-height: 100%;
   }
   
   .menuRight {
@@ -409,17 +424,54 @@
   }
   
   .menuLinksGrid {
-    gap: 30px;
+    gap: 20px;
     flex-direction: column; 
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .serifLink {
-    font-size: 26px; 
+    font-size: 24px; 
   }
   
   .menuActionButtons {
+    display: flex;
     flex-direction: column; 
     gap: 15px;
+    margin-bottom: 20px; /* Espace avant le bouton Fidélité */
+  }
+
+  /* --- Bouton Fidélité Mobile (Visible) --- */
+  .loyaltyBtnMobileMenu {
+    display: inline-block; 
+  background-color: #2A9D8F; 
+  color: #FFFFFF;
+  border: 2px solid #2A9D8F; 
+    padding: 12px 25px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.4;
+    border-radius: 3px;
+    width: 100%; 
+    margin-bottom: 30px; 
+  }
+
+  .loyaltyBtnMobileMenu span {
+    font-weight: 800;
+    font-size: 13px;
+    display: block;
+    margin-top: 3px;
+  }
+.loyaltyBtnMobileMenu:hover {
+  background-color: #2A9D8F;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+  .menuFooterLeft {
+    text-align: center; /* On centre le texte final sur mobile */
   }
 }

@@ -120,6 +120,18 @@ function Header() {
               <Link to="/contact" className={styles.whiteRectBtn} onClick={toggleMenu}>Nous contacter</Link>
             </div>
 
+
+            {/* NOUVEAU : Bouton Fidélité (Visible QUE sur mobile) */}
+            <a 
+              href="https://www.theoriginalshotels.com/fidelite" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.loyaltyBtnMobileMenu}
+            >
+              Fidélité <br/>
+              <span>ORIGINALS CLUB</span>
+            </a>
+
             {/* Le petit texte de bas de page à gauche */}
             <div className={styles.menuFooterLeft}>
               <p className={styles.footerItalic}>Découvrez The Originals Boutique</p>

@@ -29,7 +29,17 @@ function Hero() {
           className={`${styles.heroImage} ${index === currentIndex ? styles.active : ''}`}
         />
       ))}
-      {/* On a retiré le bloc "scrollDown" ici pour garder un Hero 100% pur */}
+      
+      {/* --- La flèche cerclée (Visible uniquement sur mobile grâce au CSS) --- */}
+      <div 
+        className={styles.heroScrollArrow} 
+        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </div>
+      
     </section>
   );
 }
