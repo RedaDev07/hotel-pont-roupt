@@ -67,6 +67,15 @@ function Header() {
           
         </div>
       </header>
+      {/* --- NOUVEAU : La Barre de Réservation Mobile (Fixée en bas) --- */}
+      <a 
+        href="https://www.theoriginalshotels.com/hotels/du-pont-roupt-mende/book/dates-of-stay?_gl=1*2naxht*_ga*MTA0MTgwOTA2MC4xNzYyMjc1MTMw*_ga_3R5SJEDWK4*czE3NzkyMTk2NjQkbzgkZzEkdDE3NzkyMTk3NTIkajU5JGwwJGgw*_fplc*aFoxYUVXTUNuT1J0TTJvVWZiaGVDdFNranpCNHE0JTJCQVV4ZEZYV2FJSExKcklmTG5XajA0d2VtYjVoOFVmTWFxSmNGbVRzNUclMkJ2eVpmQ21mRSUyRnNCM2cwdmJ2aSUyQmpBWkV0MmI2YWQyWEczR25CZ1NsMHlsNktyNmhrUUJVNUElM0QlM0Q.*_gcl_au*NzQyMTMwMDg1LjE3NzY4Nzc2MTc.*_ga_995P0KWECH*czE3NzkyMDY1NDkkbzYkZzEkdDE3NzkyMTk3NTMkajU3JGwwJGgxNzczMTMxMzYw&adults=1&domain=www.theoriginalshotels.com&HotelId=106037&languageid=3&rooms=1&subchan=SITE-TheOriginals" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className={styles.mobileBottomBookBtn}
+      >
+        Réserver
+      </a>
 
       {/* ... Le reste de ton code pour le Menu Overlay ne change pas du tout ! ... */}
       <div className={`${styles.menuOverlay} ${isMenuOpen ? styles.menuOpen : ''}`}>

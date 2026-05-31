@@ -333,11 +333,19 @@
   color: var(--color-orange);
 }
 
+
+/* =========================================
+   BARRE DE RÉSERVATION MOBILE (BOTTOM)
+   ========================================= */
+.mobileBottomBookBtn {
+  display: none; /* Toujours caché sur ordinateur */
+}
+
 /* =========================================
    RESPONSIVE MOBILE (TABLETTES & SMARTPHONES)
    ========================================= */
 @media (max-width: 992px) {
-  /* --- La barre fixe --- */
+  /* --- La barre fixe en haut --- */
   .header {
     padding: 15px 20px; 
   }
@@ -346,39 +354,45 @@
     padding: 15px 20px;
   }
   
-  .logoImage {
-    height: 40px; 
-    margin-left: 0; /* Centrage pour le mobile */
-  }
-  
   .menuBtn {
-    font-size: 12px; 
+    font-size: 13px; 
   }
 
-  /* --- Groupe de boutons à droite --- */
+  /* Pour que le logo reste parfaitement au centre sans les boutons de droite */
+  .logoCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logoImage {
+    height: 45px; 
+    margin-left: 0; 
+  }
+
+  /* --- Cacher les boutons du haut --- */
   .headerRight {
-    gap: 5px; /* Espacement minimum entre les boutons */
+    display: none; /* On vide complètement la droite de l'en-tête */
   }
 
-  /* On garde le bouton Fidélité, en format miniature */
-  .loyaltyBtnTop {
-    display: inline-block; 
-    padding: 5px 8px; 
-    font-size: 7px; 
-    letter-spacing: 0.5px;
-  }
-
-  .loyaltyBtnTop span {
-    font-size: 8px;
-    letter-spacing: 0.5px;
-    margin-top: 1px;
-  }
-
-  /* Le bouton Réserver adapté pour faire de la place */
-  .reserverBtnTop {
-    padding: 6px 10px; 
-    font-size: 9px;
-    letter-spacing: 1px;
+  /* --- NOUVEAU : Afficher la barre de réservation en bas --- */
+  .mobileBottomBookBtn {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #FF8500; 
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif; /* Typo Serif */
+    font-size: 24px;
+    font-style: italic; /* Italique comme sur la capture */
+    text-decoration: none;
+    z-index: 90; /* Par-dessus le site, mais sous le menu ouvert */
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
   }
 
   /* --- Le Menu Plein Écran --- */
