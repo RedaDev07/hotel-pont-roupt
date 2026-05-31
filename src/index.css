@@ -1,0 +1,49 @@
+/* --- ANIMATIONS MODERNES --- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08); /* Zoom très léger et élégant */
+  }
+}
+
+.animate-fade-up {
+  opacity: 0; /* Caché par défaut avant l'animation */
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Délais pour faire apparaître les éléments les uns après les autres */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+/* RESET COMPLET POUR LE PLEIN ÉCRAN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Crucial pour que le padding ne casse pas la largeur 100% */
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Interdit l'apparition de la marge blanche à droite */
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }

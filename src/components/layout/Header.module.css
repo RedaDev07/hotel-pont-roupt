@@ -1,0 +1,411 @@
+/* =========================================
+   LE HEADER FIXE (BARRE TRANSPARENTE)
+   ========================================= */
+.header {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px; 
+  z-index: 100; 
+  transition: all 0.4s ease; 
+}
+
+/* LA NOUVELLE CLASSE AU SCROLL */
+.headerScrolled {
+  background-color: #ffffff; 
+  padding: 20px 80px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.headerHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- LE BOUTON MENU --- */
+.menuBtn {
+  background: transparent;
+  border: none;
+  color: #FF8500; 
+  font-family: var(--font-texte);
+  font-size: 15px; 
+  font-weight: 700; 
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.menuBtn::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; 
+  background-color: #FF8500; 
+  margin-top: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform-origin: left; 
+}
+
+.menuBtn:hover {
+  color: var(--color-anthracite); 
+}
+
+.menuBtn:hover::after {
+  background-color: var(--color-anthracite);
+  transform: scaleX(0.5); 
+}
+
+/* --- LE LOGO --- */
+.logoCenter { 
+  text-align: center; 
+}
+
+.logoImage {
+  height: 70px;
+  margin-left: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logoImage:hover { 
+  transform: scale(1.05); 
+}
+
+/* =========================================
+   GROUPE DE BOUTONS À DROITE
+   ========================================= */
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+/* --- Bouton SECONDAIRE : Fidélité --- */
+.loyaltyBtnTop {
+  background-color: #2A9D8F; 
+  color: #FFFFFF;
+  padding: 6px 12px; 
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; 
+  font-size: 9px; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 1.2; 
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(42, 157, 143, 0.15); 
+}
+
+.loyaltyBtnTop span {
+  font-weight: 700; 
+  font-size: 10px;  
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 2px;
+}
+
+.loyaltyBtnTop:hover {
+  background-color: #FFFFFF;
+  color: #2A9D8F;
+  transform: translateY(-2px);
+}
+
+/* --- Bouton PRIMAIRE : Réserver --- */
+.reserverBtnTop {
+  background-color: #FF8500; /* Gardé en Orange Boutique */
+  color: #FFFFFF;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 133, 0, 0.2); 
+}
+
+.reserverBtnTop:hover {
+  background-color: #FFFFFF;
+  color: #FF8500;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LE MENU PLEIN ECRAN (OVERLAY "PALETTE OFFICIELLE")
+   ========================================= */
+.menuOverlay {
+  --color-anthracite: #e8d1b4;     
+  --color-orange: #FF8500; 
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-anthracite); 
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Barre du haut (Langues + Croix) --- */
+.menuTopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.langSelector {
+  display: flex;
+  gap: 15px;
+  font-family: var(--font-texte);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-beige-zen); 
+}
+
+.langActive {
+  border-bottom: 1px solid var(--color-orange); 
+  color: var(--color-orange);
+  padding-bottom: 2px;
+}
+
+.langLink {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.langLink:hover { 
+  opacity: 1; 
+  color: var(--color-orange);
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: var(--color-beige-zen); 
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover { 
+  color: var(--color-orange); 
+}
+
+/* --- Corps du Menu --- */
+.menuBody {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menuLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuLinksGrid {
+  display: flex;
+  gap: 120px;
+  margin-bottom: 80px;
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.serifLink {
+  font-family: var(--font-titre);
+  font-style: italic;
+  font-size: 34px;
+  color: var(--color-beige-zen); 
+  text-decoration: none;
+  transition: color 0.3s ease;
+  width: fit-content;
+}
+
+.serifLink:hover {
+  color: var(--color-orange); 
+}
+
+.menuActionButtons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.whiteRectBtn {
+  background-color: var(--color-beige-zen); 
+  color: var(--color-anthracite); 
+  padding: 12px 35px;
+  text-decoration: none;
+  font-family: var(--font-titre);
+  font-style: italic;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.whiteRectBtn:hover {
+  background-color: var(--color-orange);
+  color: var(--color-blanc);
+}
+
+.menuFooterLeft {
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+.footerItalic {
+  font-family: var(--font-titre);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--color-beige-zen);
+  margin-bottom: 10px;
+}
+
+.footerCities {
+  font-family: var(--font-texte);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-orange); 
+  letter-spacing: 2px;
+}
+
+/* --- Côté Droit (Image & Instagram) --- */
+.menuRight {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 20px;
+}
+
+.menuPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+}
+
+.instaLink {
+  font-family: var(--font-titre);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--color-beige-zen);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.instaLink:hover {
+  color: var(--color-orange);
+}
+
+/* =========================================
+   RESPONSIVE MOBILE (TABLETTES & SMARTPHONES)
+   ========================================= */
+@media (max-width: 992px) {
+  /* --- La barre fixe --- */
+  .header {
+    padding: 15px 20px; 
+  }
+  
+  .headerScrolled {
+    padding: 15px 20px;
+  }
+  
+  .logoImage {
+    height: 40px; 
+    margin-left: 0; /* Centrage pour le mobile */
+  }
+  
+  .menuBtn {
+    font-size: 12px; 
+  }
+
+  /* --- Groupe de boutons à droite --- */
+  .headerRight {
+    gap: 5px; /* Espacement minimum entre les boutons */
+  }
+
+  /* On garde le bouton Fidélité, en format miniature */
+  .loyaltyBtnTop {
+    display: inline-block; 
+    padding: 5px 8px; 
+    font-size: 7px; 
+    letter-spacing: 0.5px;
+  }
+
+  .loyaltyBtnTop span {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    margin-top: 1px;
+  }
+
+  /* Le bouton Réserver adapté pour faire de la place */
+  .reserverBtnTop {
+    padding: 6px 10px; 
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  /* --- Le Menu Plein Écran --- */
+  .menuOverlay {
+    padding: 30px;
+  }
+  
+  .menuBody {
+    flex-direction: column; 
+  }
+  
+  .menuRight {
+    display: none; 
+  }
+  
+  .menuLinksGrid {
+    gap: 30px;
+    flex-direction: column; 
+    margin-bottom: 40px;
+  }
+  
+  .serifLink {
+    font-size: 26px; 
+  }
+  
+  .menuActionButtons {
+    flex-direction: column; 
+    gap: 15px;
+  }
+}
