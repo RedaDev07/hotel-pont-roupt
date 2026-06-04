@@ -116,11 +116,12 @@ function Header() {
 
             {/* Les deux boutons blancs rectangulaires */}
             <div className={styles.menuActionButtons}>
-              <Link to="/contact" className={styles.whiteRectBtn} onClick={toggleMenu}>Réserver</Link>
+              <Link to="https://www.theoriginalshotels.com/hotels/du-pont-roupt-mende/book/dates-of-stay?_gl=1*2naxht*_ga*MTA0MTgwOTA2MC4xNzYyMjc1MTMw*_ga_3R5SJEDWK4*czE3NzkyMTk2NjQkbzgkZzEkdDE3NzkyMTk3NTIkajU5JGwwJGgw*_fplc*aFoxYUVXTUNuT1J0TTJvVWZiaGVDdFNranpCNHE0JTJCQVV4ZEZYV2FJSExKcklmTG5XajA0d2VtYjVoOFVmTWFxSmNGbVRzNUclMkJ2eVpmQ21mRSUyRnNCM2cwdmJ2aSUyQmpBWkV0MmI2YWQyWEczR25CZ1NsMHlsNktyNmhrUUJVNUElM0QlM0Q.*_gcl_au*NzQyMTMwMDg1LjE3NzY4Nzc2MTc.*_ga_995P0KWECH*czE3NzkyMDY1NDkkbzYkZzEkdDE3NzkyMTk3NTMkajU3JGwwJGgxNzczMTMxMzYw&adults=1&domain=www.theoriginalshotels.com&HotelId=106037&languageid=3&rooms=1&subchan=SITE-TheOriginals" 
+               className={styles.whiteRectBtn} onClick={toggleMenu}>Réserver</Link>
               <Link to="/contact" className={styles.whiteRectBtn} onClick={toggleMenu}>Nous contacter</Link>
             </div>
 
-
+        
             {/* NOUVEAU : Bouton Fidélité (Visible QUE sur mobile) */}
             <a 
               href="https://www.theoriginalshotels.com/fidelite" 
