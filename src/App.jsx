@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./index.css";
+import ScrollToTop from "./components/ScrollToTop"; // 1. IMPORT DU COMPOSANT SCROLL
+
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer"; // Importation du nouveau Footer
 import Accueil from "./pages/Accueil";
@@ -10,15 +12,19 @@ import Seminaire from "./pages/Seminaire";
 import BonsCadeaux from "./pages/BonsCadeaux";
 import Contact from "./pages/Contact";
 import Erreur404 from "./pages/Erreur404";
+import ChambreDetail from './pages/ChambreDetail';
 
 function App() {
   return (
     <Router>
+      {/* 2. PLACEMENT ICI : Il va écouter les changements de page et remonter le scroll */}
+      <ScrollToTop />
       <Header />
       
       <Routes>
         <Route path="/" element={<Accueil />} />
         <Route path="/chambres" element={<Chambres />} />
+        <Route path="/chambres/:id" element={<ChambreDetail />} /> {/* NOUVELLE LIGNE À AJOUTER */}
         <Route path="/spa" element={<Spa />} />
         <Route path="/bar" element={<Bar />} />
         <Route path="/seminaire" element={<Seminaire />} />

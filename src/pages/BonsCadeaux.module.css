@@ -1,0 +1,92 @@
+/* =========================================
+   CONTENEUR GLOBAL & EN-TÊTE
+   ========================================= */
+.pageContainer {
+  padding-top: 150px;
+  padding-bottom: 0; /* Pas de padding bas car l'iframe prend le relai */
+  background-color: #FAFAFA;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 0 20px 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.surtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+/* Titre principal en Bleu Ardoise #2C3E50 */
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.separator {
+  width: 40px;
+  height: 2px;
+  background-color: #1A1A1A;
+  margin: 0 auto 30px auto;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* =========================================
+   LA SECTION IFRAME BONKDO (AVEC ASTUCE DE RECADRAGE)
+   ========================================= */
+.iframeSection {
+  width: 100%;
+  height: 1200px; /* La hauteur visible de ta boutique */
+  background-color: #FFFFFF;
+  border-top: 1px solid #EAEAE0;
+  
+  /* L'ASTUCE EST ICI 👇 */
+  overflow: hidden; /* C'est ce qui permet de cacher ce qui déborde en haut */
+}
+
+.bonkdoIframe {
+  width: 100%;
+  /* On ajoute la hauteur qu'on va cacher pour ne pas perdre d'espace en bas */
+  height: calc(100% + 130px); 
+  border: none;
+  display: block;
+  
+  /* LA MAGIE EST ICI 👇 */
+  margin-top: -130px; /* On tire l'iframe vers le haut pour faire disparaître leur menu ! */
+}
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 992px) {
+  .pageContainer {
+    padding-top: 120px;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .iframeSection {
+    /* Sur téléphone, les coffrets s'empilent verticalement, 
+       il faut donc une iframe beaucoup plus longue */
+    height: 1800px; 
+  }
+}

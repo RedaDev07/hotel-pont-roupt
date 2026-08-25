@@ -31,7 +31,7 @@ function Footer() {
             <h4 className={styles.colTitle}>La Maison</h4>
             <ul>
               <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/chambres">Chambres & Suites</Link></li>
+              <li><Link to="/chambres">Chambres</Link></li>
               <li><Link to="/bistrot">Bistrot Bar à Vin</Link></li>
               <li><Link to="/spa">Spa & Détente</Link></li>
               <li><Link to="/seminaires">Séminaires & Événements</Link></li>

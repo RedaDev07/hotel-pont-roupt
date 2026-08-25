@@ -1,5 +1,6 @@
 import styles from './RoomsPreview.module.css';
 import roomImg from '../../assets/chambre-preview.jpg'; 
+import { Link } from 'react-router-dom'; // 1. ON IMPORTE LE COMPOSANT LINK
 
 function RoomsPreview() {
   return (
@@ -33,16 +34,16 @@ function RoomsPreview() {
             
             {/* Liste des équipements (style minimaliste) */}
             <ul className={styles.amenitiesList}>
-              <li>Climatisation intégrale</li>
+              <li>Climatisation </li>
               <li>Accès ascenseur</li>
-              <li>Plateau de courtoisie</li>
               <li>Literie haut de gamme</li>
             </ul>
 
-            <button className={styles.actionBtn}>
+            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="..."> */}
+            <Link to="/chambres" className={styles.actionBtn}>
               VOIR TOUTES LES CHAMBRES
               <span className={styles.btnArrow}>→</span>
-            </button>
+            </Link>
           </div>
 
         </div>

@@ -1,0 +1,289 @@
+/* =========================================
+   LE CONTENEUR SPLIT SCREEN (50/50)
+   ========================================= */
+.splitContainer {
+  display: flex;
+  min-height: 100vh; 
+  background-color: #FDFBF8; 
+  
+  /* NOUVEAU : On laisse l'espace exact pour ton menu (ajuste cette valeur selon la hauteur de ton header) */
+  padding-top: 120px; 
+}
+
+/* =========================================
+   MOITIÉ GAUCHE : L'IMAGE
+   ========================================= */
+.imageSide {
+  flex: 1; /* Prend 50% de la largeur */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Parfait pour un rectangle vertical */
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.imageSide:hover .mainImage {
+  transform: scale(1.03); /* Léger zoom au survol */
+}
+
+/* L'effet d'assombrissement et le bouton "+" au survol */
+.imageOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.imageSide:hover .imageOverlay {
+  opacity: 1;
+}
+
+.plusIcon {
+  font-size: 60px;
+  color: #FFFFFF;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.galleryText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/* =========================================
+   MOITIÉ DROITE : LE CONTENU
+   ========================================= */
+.contentSide {
+  flex: 1; /* Prend 50% de la largeur */
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  padding: 120px 8%;
+}
+
+.contentInner {
+  max-width: 550px;
+  text-align: center; /* Tout le texte est centré comme sur l'image */
+}
+
+.roomName {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.roomDesc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+  margin-bottom: 60px;
+}
+
+/* =========================================
+   LE TABLEAU "EN DÉTAILS"
+   ========================================= */
+.detailsTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2C3E50;
+  margin-bottom: 30px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes */
+  border-top: 1px solid #D2BCA0; /* Couleur bordure de ta maquette */
+  border-bottom: 1px solid #D2BCA0;
+}
+
+.detailItem {
+  padding: 25px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #333333;
+}
+
+/* Bordures internes pour créer la croix du tableau */
+.detailItem:nth-child(1), .detailItem:nth-child(2) {
+  border-bottom: 1px solid #EAEAEA;
+}
+.detailItem:nth-child(odd) {
+  border-right: 1px solid #EAEAEA;
+}
+
+.icon {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+/* =========================================
+   LES LIENS DU BAS
+   ========================================= */
+.actionLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.backLink {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #FF8500; /* Couleur marron/cuivré de l'image */
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+.bookLink {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FF8500;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 2px solid #FF8500;
+  padding-bottom: 5px;
+  transition: opacity 0.3s ease;
+}
+
+
+
+/* =========================================
+   LA MODALE DU CARROUSEL (PLEIN ÉCRAN)
+   ========================================= */
+.galleryModal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(10, 10, 10, 0.95); /* Noir presque opaque */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 1010;
+  transition: transform 0.3s ease;
+}
+
+.closeBtn:hover {
+  transform: scale(1.2);
+  color: #FF8500;
+}
+
+.navBtn {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 50px;
+  padding: 0 40px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navBtn:hover {
+  color: #FF8500;
+}
+
+.modalImageContainer {
+  position: relative;
+  text-align: center;
+}
+
+.modalImage {
+  max-width: 80vw;
+  max-height: 85vh;
+  object-fit: contain; /* L'image s'affiche en entier sans être coupée */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.imageCounter {
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 992px) {
+  .splitContainer {
+    flex-direction: column; /* Les blocs s'empilent verticalement */
+  }
+  
+  .imageSide {
+    height: 60vh; /* L'image prend 60% de l'écran sur téléphone */
+    flex: none;
+  }
+  
+  .contentSide {
+    padding: 60px 20px;
+    flex: none;
+  }
+  
+  .actionLinks {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .navBtn {
+    padding: 0 15px;
+    font-size: 30px;
+  }
+}
+
+/* Style des icônes SVG de la grille */
+.customIcon {
+  width: 26px;
+  height: 26px;
+  color: #1A1A1A; /* Trait noir élégant */
+  flex-shrink: 0;
+}

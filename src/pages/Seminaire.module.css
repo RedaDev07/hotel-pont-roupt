@@ -1,0 +1,336 @@
+/* =========================================
+   CONTENEUR GLOBAL & EN-TÊTE
+   ========================================= */
+.pageContainer {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background-color: #FAFAFA;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 0 20px 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.surtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.separator {
+  width: 40px;
+  height: 2px;
+  background-color: #1A1A1A;
+  margin: 0 auto 30px auto;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* =========================================
+   BLOCS ÉDITORIAUX (PHOTO + TEXTE)
+   ========================================= */
+.editorialSection {
+  max-width: 1250px;
+  margin: 0 auto 130px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.editorialRow {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.reverseRow {
+  flex-direction: row-reverse;
+}
+
+.imageCol {
+  flex: 1;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.editorialImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.imageWrapper:hover .editorialImage {
+  transform: scale(1.05);
+}
+
+.textCol {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.tag {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+.rowTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.rowDesc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #555555;
+  margin-bottom: 35px;
+}
+
+/* Badges "Pilules" */
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.featureBadge {
+  background-color: #FDFBF8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #EAEAE0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1A1A1A;
+}
+
+/* =========================================
+   GRILLE DES ÉQUIPEMENTS TECHNIQUES
+   ========================================= */
+.equipmentSection {
+  max-width: 1200px;
+  margin: 0 auto 130px auto;
+  padding: 0 20px;
+}
+
+.equipmentHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.equipmentTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-top: 10px;
+}
+
+.equipmentGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.equipmentCard {
+  background-color: #FFFFFF;
+  border: 1px solid #F0EAE1;
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipmentCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.customIcon {
+  width: 36px;
+  height: 36px;
+  color: #FF8500;
+  margin-bottom: 20px;
+}
+
+.equipmentCard h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #2C3E50;
+  margin-bottom: 12px;
+}
+
+.equipmentCard p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #777777;
+  margin: 0;
+}
+
+/* =========================================
+   ENCADRÉ DE CONTACT / DEVIS
+   ========================================= */
+.contactSection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contactCard {
+  background-color: #2C3E50; /* Bloc anthracite noble */
+  color: #FFFFFF;
+  padding: 70px 50px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.contactTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-style: italic;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.contactText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #DDDDDD;
+  margin-bottom: 40px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background-color: #FF8500;
+  color: #FFFFFF;
+  padding: 18px 34px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.secondaryBtn {
+  background-color: #FF8500; /* Fond orange exactement comme le bouton e-mail */
+  color: #FFFFFF;
+  padding: 18px 34px;
+  border: 1px solid #FF8500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 992px) {
+  .pageContainer {
+    padding-top: 120px;
+  }
+
+  .editorialSection {
+    gap: 80px;
+  }
+
+  .editorialRow,
+  .reverseRow {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .imageWrapper {
+    height: 350px;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .rowTitle {
+    font-size: 30px;
+  }
+
+  .equipmentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactCard {
+    padding: 50px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .equipmentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

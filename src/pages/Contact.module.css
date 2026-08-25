@@ -1,0 +1,382 @@
+/* =========================================
+   CONTENEUR GLOBAL & EN-TÊTE
+   ========================================= */
+.pageContainer {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background-color: #FAFAFA;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 0 20px 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.surtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+/* Titre principal en Bleu Ardoise #2C3E50 */
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.separator {
+  width: 40px;
+  height: 2px;
+  background-color: #1A1A1A;
+  margin: 0 auto 30px auto;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* =========================================
+   SECTION PRINCIPALE (GRILLE COORDONNÉES / FORMULAIRE)
+   ========================================= */
+.mainSection {
+  max-width: 1250px;
+  margin: 0 auto 120px auto;
+  padding: 0 20px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* --- COLONNE GAUCHE (INFOS) --- */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #FF8500;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.addressBox {
+  background-color: #FFFFFF;
+  border: 1px solid #F0EAE1;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.addressLine {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.addressLine:last-child {
+  margin-bottom: 0;
+}
+
+.addressLine strong {
+  color: #2C3E50;
+}
+
+.link {
+  color: #2C3E50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #FF8500;
+}
+
+/* Titre des modes d'accès en #2C3E50 */
+.subTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
+
+.transportCards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.transportCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #F0EAE1;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.transportCard:hover {
+  transform: translateX(6px);
+}
+
+.transportIcon {
+  font-size: 24px;
+}
+
+.transportCard h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #2C3E50;
+  margin-bottom: 6px;
+}
+
+.transportCard p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+}
+
+/* --- COLONNE DROITE (FORMULAIRE) --- */
+.formColumn {
+  width: 100%;
+}
+
+.formCard {
+  background-color: #FFFFFF;
+  border: 1px solid #F0EAE1;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.formTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.formSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #777777;
+  margin-bottom: 35px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.rowInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2C3E50;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #E4DFD7;
+  background-color: #FAFAFA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+  border-color: #FF8500;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(255, 133, 0, 0.1);
+}
+
+/* Bouton d'envoi orange #FF8500 */
+.submitBtn {
+  background-color: #FF8500;
+  color: #FFFFFF;
+  padding: 18px 30px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  background-color: #2C3E50;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Message de succès après envoi */
+.successMessage {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #EBF8F2;
+  color: #2EB85C;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.successMessage h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+.successMessage p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.resetBtn {
+  background-color: transparent;
+  color: #2C3E50;
+  border: 1px solid #2C3E50;
+  padding: 12px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetBtn:hover {
+  background-color: #2C3E50;
+  color: #FFFFFF;
+}
+
+/* =========================================
+   SECTION GOOGLE MAPS
+   ========================================= */
+.mapSection {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mapTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-top: 10px;
+}
+
+.mapContainer {
+  width: 100%;
+  border: 1px solid #EFEAE2;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 992px) {
+  .pageContainer {
+    padding-top: 120px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .formCard {
+    padding: 35px 25px;
+  }
+
+  .rowInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .mapContainer iframe {
+    height: 350px;
+  }
+}

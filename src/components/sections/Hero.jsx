@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 
 import img1 from '../../assets/hero-1.webp';
-import img2 from '../../assets/hero-2.webp';
+import img2 from '../../assets/Hotel Pont Roupt-034.jpg';
 import img3 from '../../assets/hero-3.jpg';
 import img4 from '../../assets/hero-4.jpg';
-import img5 from '../../assets/hero-5.jpg';
+import img5 from '../../assets/piscine1.jpg';
+import img6 from '../../assets/Hotel Pont Roupt-056.jpg';
 
-const images = [img1, img2, img3, img4, img5];
+
+const images = [img1, img2, img3, img4, img5, img6];
 
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);

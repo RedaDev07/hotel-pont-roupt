@@ -1,0 +1,251 @@
+/* =========================================
+   CONTENEUR GLOBAL & EN-TÊTE
+   ========================================= */
+.pageContainer {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background-color: #FAFAFA;
+  min-height: 100vh;
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 0 20px 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.surtitle {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-style: italic;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.separator {
+  width: 40px;
+  height: 2px;
+  background-color: #1A1A1A;
+  margin: 0 auto 30px auto;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* =========================================
+   BLOCS ÉDITORIAUX (PHOTO + TEXTE)
+   ========================================= */
+.editorialSection {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Bel espace aéré entre chaque histoire */
+}
+
+.editorialRow {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* L'effet miroir pour inverser l'image et le texte un bloc sur deux */
+.reverseRow {
+  flex-direction: row-reverse;
+}
+
+.imageCol {
+  flex: 1;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.editorialImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.imageWrapper:hover .editorialImage {
+  transform: scale(1.05); /* Effet zoom haut de gamme au survol */
+}
+
+/* Colonne de texte */
+.textCol {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.tag {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #FF8500;
+  margin-bottom: 15px;
+}
+
+.rowTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #2C3E50;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.rowDesc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #555555;
+  margin-bottom: 35px;
+}
+
+/* Badges "Pilules" (Style identique aux chambres) */
+.featuresList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.featureBadge {
+  background-color: #FDFBF8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid #EAEAE0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1A1A1A;
+}
+
+/* =========================================
+   SECTION CARTE PDF EN BAS DE PAGE
+   ========================================= */
+.pdfSection {
+  max-width: 900px;
+  margin: 140px auto 0 auto;
+  padding: 0 20px;
+}
+
+.pdfCard {
+  background-color: #2C3E50;
+  border: 1px solid #F0EAE1;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.04);
+}
+
+.pdfTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-style: italic;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.pdfText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #DDDDDD;
+  margin-bottom: 35px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.pdfBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #FF8500;
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pdfIcon {
+  width: 18px;
+  height: 18px;
+  color: #FF8500;
+  transition: transform 0.3s ease; 
+   color: #FFFFFF;
+  transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+@media (max-width: 992px) {
+  .pageContainer {
+    padding-top: 120px;
+  }
+
+  .editorialSection {
+    gap: 80px;
+  }
+
+  .editorialRow,
+  .reverseRow {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .imageWrapper {
+    height: 350px;
+  }
+
+  .mainTitle {
+    font-size: 38px;
+  }
+
+  .rowTitle {
+    font-size: 30px;
+  }
+
+  .pdfCard {
+    padding: 40px 20px;
+  }
+
+  .pdfBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

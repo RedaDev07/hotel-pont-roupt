@@ -1,6 +1,7 @@
 import styles from './SpaPreview.module.css';
+import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
 
-import imgPiscine from '../../assets/spa-piscine.webp';
+import imgPiscine from '../../assets/insta-3.jpg';
 import imgSauna from '../../assets/spa-sauna.webp';
 import imgSoins from '../../assets/spa-soins.webp';
 
@@ -58,10 +59,11 @@ function SpaPreview() {
               <li>Modelages & Soins sur-mesure</li>
             </ul>
 
-            <button className={`${styles.actionBtn} animate-fade-up delay-500`}>
+            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="/spa"> */}
+            <Link to="/spa" className={`${styles.actionBtn} animate-fade-up delay-500`}>
               DÉCOUVRIR LE SPA
               <span className={styles.btnArrow}>→</span>
-            </button>
+            </Link>
           </div>
         </div>
 

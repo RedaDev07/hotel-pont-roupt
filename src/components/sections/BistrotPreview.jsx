@@ -1,5 +1,5 @@
 import styles from './BistrotPreview.module.css';
-
+import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
 import img1 from '../../assets/bistrot-1.jpg'; // La grande photo (ambiance)
 import img2 from '../../assets/bistrot-2.jpg'; // Petite photo 1 (petit déjeuner)
 import img3 from '../../assets/bistrot-3.jpg'; // Petite photo 2 (planche)
@@ -26,10 +26,11 @@ function BistrotPreview() {
               Dès le réveil, installez-vous pour savourer un petit-déjeuner généreux mettant à l'honneur les produits locaux. En fin de journée, l'ambiance se tamise : détendez-vous autour d'une de nos savoureuses planches de charcuterie et de fromages de la région.
             </p>
 
-            <button className={`${styles.actionBtn} animate-fade-up delay-400`}>
+            {/* 2. REMPLACEMENT DU <button> PAR <Link to="/bar"> */}
+            <Link to="/bar" className={`${styles.actionBtn} animate-fade-up delay-400`}>
               DÉCOUVRIR NOTRE CARTE
               <span className={styles.btnArrow}>→</span>
-            </button>
+            </Link>
           </div>
         </div>
 

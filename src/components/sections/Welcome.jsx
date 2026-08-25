@@ -1,5 +1,5 @@
 import styles from './Welcome.module.css';
-import mainImg from '../../assets/maison-accueil.webp'; 
+import mainImg from '../../assets/hotel.jpg'; 
 // Prépare une 2ème photo de détail (ex: un zoom sur un élément du salon, un verre, etc.)
 import detailImg from '../../assets/maison-detail.jpg'; 
 

@@ -1,5 +1,6 @@
 import styles from './SeminairePreview.module.css';
-import seminaireImage from '../../assets/seminaire-preview.jpeg';
+import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
+import seminaireImage from '../../assets/sem.jpeg';
 
 function SeminairePreview() {
   return (
@@ -30,10 +31,11 @@ function SeminairePreview() {
               <li>Formules résidentielles ou semi-résidentielles</li>
             </ul>
 
-            <button className={`${styles.actionBtn} animate-fade-up delay-500`}>
+            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="/seminaire"> */}
+            <Link to="/seminaire" className={`${styles.actionBtn} animate-fade-up delay-500`}>
               DÉCOUVRIR NOS ESPACES
               <span className={styles.btnArrow}>→</span>
-            </button>
+            </Link>
           </div>
         </div>
 
