@@ -79,14 +79,16 @@ function Bar() {
 
       </section>
 
-      {/* 3. ENCADRÉ FINALE POUR LA CARTE PDF */}
+    {/* 3. ENCADRÉ FINALE POUR LA CARTE PDF */}
       <section className={styles.pdfSection}>
         <div className={styles.pdfCard}>
           <span className={styles.surtitle}>{t('bar.pdfSurtitle')}</span>
           <h3 className={styles.pdfTitle}>{t('bar.pdfTitle')}</h3>
           <p className={styles.pdfText}>{t('bar.pdfText')}</p>
+          
+          {/* 👇 LE LIEN EST MIS À JOUR ICI 👇 */}
           <a 
-            href="/Carte-Bar-Pont-Roupt.pdf" 
+            href="/White-Minimalistic-Bar-Drinks-Price-Menu.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className={styles.pdfBtn}

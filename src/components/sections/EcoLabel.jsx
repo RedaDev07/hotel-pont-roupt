@@ -1,7 +1,13 @@
+// --- AJOUTE CET IMPORT ---
+import { useTranslation } from 'react-i18next';
+
 import styles from './EcoLabel.module.css';
 import clefVerteLogo from '../../assets/clef-verte.webp'; 
 
 function EcoLabel() {
+  // --- ACTIVE LE HOOK ICI ---
+  const { t } = useTranslation();
+
   return (
     <section className={styles.ecoSection}>
       <div className={styles.card}>
@@ -9,46 +15,55 @@ function EcoLabel() {
         {/* GAUCHE : LOGO AVEC ANIMATION FLOTTANTE ET HALO */}
         <div className={styles.logoSide}>
           <div className={styles.logoGlow}></div>
+          {/* --- REMPLACE LE TEXTE ALT --- */}
           <img 
             src={clefVerteLogo} 
-            alt="Label Clef Verte - Tourisme Durable" 
+            alt={t('accueil.eco.alt')} 
             className={styles.logo} 
           />
-          <span className={styles.badgeYear}>Certifié Clef Verte</span>
+          {/* --- REMPLACE LE TEXTE --- */}
+          <span className={styles.badgeYear}>{t('accueil.eco.certified')}</span>
         </div>
 
         {/* DROITE : CONTENU ÉDITORIAL & BADGES INTERACTIFS */}
         <div className={styles.contentSide}>
           
           <div className={styles.headerRow}>
-            <span className={styles.tag}>TOURISME DURABLE & ENGAGÉ</span>
+            {/* --- REMPLACE LE TEXTE --- */}
+            <span className={styles.tag}>{t('accueil.eco.tag')}</span>
             <span className={styles.pulseContainer}>
               <span className={styles.pulseDot}></span>
-              <span className={styles.pulseText}>Engagement actif</span>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <span className={styles.pulseText}>{t('accueil.eco.status')}</span>
             </span>
           </div>
           
-          <h2 className={styles.title}>L’Élégance d'un Séjour Éco-Responsable</h2>
+          {/* --- REMPLACE LE TEXTE --- */}
+          <h2 className={styles.title}>{t('accueil.eco.title')}</h2>
           
           <p className={styles.description}>
-            Soucieux de préserver notre exceptionnel terroir de Lozère, l'Hôtel du Pont Roupt 
-            s'engage quotidiennement dans une démarche respectueuse de l'environnement, 
-            certifiée par le prestigieux label international <strong>Clef Verte</strong>.
+            {/* --- REMPLACE LE TEXTE (Partie 1) --- */}
+            {t('accueil.eco.descPart1')} 
+            {/* --- REMPLACE LE TEXTE STRONG --- */}
+            <strong>{t('accueil.eco.descLabel')}</strong>.
           </p>
 
           {/* PILULES INTERACTIVES ANIMÉES AU SURVOL */}
           <div className={styles.pillsGrid}>
             <div className={styles.pill}>
               <span className={styles.pillIcon}>🌱</span>
-              <span>Gastronomie en Circuit Court</span>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <span>{t('accueil.eco.pill1')}</span>
             </div>
             <div className={styles.pill}>
               <span className={styles.pillIcon}>💧</span>
-              <span>Gestion Raisonnée de l'Eau</span>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <span>{t('accueil.eco.pill2')}</span>
             </div>
             <div className={styles.pill}>
               <span className={styles.pillIcon}>⚡</span>
-              <span>Énergie Propre & Durable</span>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <span>{t('accueil.eco.pill3')}</span>
             </div>
           </div>
 

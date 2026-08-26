@@ -1,10 +1,16 @@
+// --- AJOUTE CET IMPORT ---
+import { useTranslation } from 'react-i18next';
+
 import styles from './BistrotPreview.module.css';
-import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
-import img1 from '../../assets/bistrot-1.jpg'; // La grande photo (ambiance)
-import img2 from '../../assets/bistrot-2.jpg'; // Petite photo 1 (petit déjeuner)
-import img3 from '../../assets/bistrot-3.jpg'; // Petite photo 2 (planche)
+import { Link } from 'react-router-dom'; 
+import img1 from '../../assets/bistrot-1.jpg'; 
+import img2 from '../../assets/bistrot-2.jpg'; 
+import img3 from '../../assets/bistrot-3.jpg'; 
 
 function BistrotPreview() {
+  // --- ACTIVE LE HOOK ICI ---
+  const { t } = useTranslation();
+
   return (
     <section className={styles.bistrotSection}>
       <div className={styles.container}>
@@ -12,23 +18,27 @@ function BistrotPreview() {
         {/* --- Colonne de Gauche : Textes --- */}
         <div className={styles.textColumn}>
           <div className={styles.contentWrapper}>
-            <span className={`${styles.subtitle} animate-fade-up`}>ÉPICURIEN</span>
+            {/* --- REMPLACE LE TEXTE --- */}
+            <span className={`${styles.subtitle} animate-fade-up`}>{t('accueil.bistrot.subtitle')}</span>
             
             <h2 className={`${styles.title} animate-fade-up delay-100`}>
-              Bistrot <span className={styles.titleItalic}>&</span> Bar à Vin
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.bistrot.title')} <span className={styles.titleItalic}>{t('accueil.bistrot.titleItalic')}</span> {t('accueil.bistrot.titlePart2')}
             </h2>
 
             <p className={`${styles.paragraph} animate-fade-up delay-200`}>
-              Véritable cœur battant de l'Hôtel du Pont Roupt, notre Bistrot est un espace chaleureux pensé pour se retrouver, échanger et partager des moments de convivialité tout au long de la journée.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.bistrot.para1')}
             </p>
 
             <p className={`${styles.paragraph} animate-fade-up delay-300`}>
-              Dès le réveil, installez-vous pour savourer un petit-déjeuner généreux mettant à l'honneur les produits locaux. En fin de journée, l'ambiance se tamise : détendez-vous autour d'une de nos savoureuses planches de charcuterie et de fromages de la région.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.bistrot.para2')}
             </p>
 
-            {/* 2. REMPLACEMENT DU <button> PAR <Link to="/bar"> */}
             <Link to="/bar" className={`${styles.actionBtn} animate-fade-up delay-400`}>
-              DÉCOUVRIR NOTRE CARTE
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.bistrot.button')}
               <span className={styles.btnArrow}>→</span>
             </Link>
           </div>
@@ -40,17 +50,20 @@ function BistrotPreview() {
             
             {/* Image 1 : Grande photo de fond (Ambiance) */}
             <div className={`${styles.imgMain} animate-fade-up delay-200`}>
-              <img src={img1} alt="Ambiance Bistrot Pont Roupt" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={img1} alt={t('accueil.bistrot.altMain')} className={styles.image} />
             </div>
 
             {/* Image 2 : Petite photo en bas à gauche (Petit-déjeuner) */}
             <div className={`${styles.imgSmallLeft} animate-fade-up delay-400`}>
-              <img src={img2} alt="Petit-déjeuner Pont Roupt" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={img2} alt={t('accueil.bistrot.altBreakfast')} className={styles.image} />
             </div>
 
             {/* Image 3 : Petite photo en haut à droite (Planche) */}
             <div className={`${styles.imgSmallRight} animate-fade-up delay-500`}>
-              <img src={img3} alt="Planche de charcuterie" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={img3} alt={t('accueil.bistrot.altPlanche')} className={styles.image} />
             </div>
 
             {/* Petit élément de décor Orange */}

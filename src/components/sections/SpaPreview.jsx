@@ -1,11 +1,17 @@
+// --- AJOUTE CET IMPORT ---
+import { useTranslation } from 'react-i18next';
+
 import styles from './SpaPreview.module.css';
-import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
+import { Link } from 'react-router-dom'; 
 
 import imgPiscine from '../../assets/insta-3.jpg';
 import imgSauna from '../../assets/spa-sauna.webp';
 import imgSoins from '../../assets/spa-soins.webp';
 
 function SpaPreview() {
+  // --- ACTIVE LE HOOK ICI ---
+  const { t } = useTranslation();
+
   return (
     <section className={styles.spaSection}>
       <div className={styles.container}>
@@ -19,17 +25,20 @@ function SpaPreview() {
 
             {/* Image 1 : La Piscine (Grande, à gauche) */}
             <div className={`${styles.imgMain} animate-fade-up delay-200`}>
-              <img src={imgPiscine} alt="Piscine intérieure chauffée" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={imgPiscine} alt={t('accueil.spa.altPool')} className={styles.image} />
             </div>
 
             {/* Image 2 : Le Sauna (Petite, en haut à droite) */}
             <div className={`${styles.imgTopRight} animate-fade-up delay-400`}>
-              <img src={imgSauna} alt="Espace Sauna" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={imgSauna} alt={t('accueil.spa.altSauna')} className={styles.image} />
             </div>
 
             {/* Image 3 : Les Soins (Petite, en bas à droite) */}
             <div className={`${styles.imgBottomRight} animate-fade-up delay-500`}>
-              <img src={imgSoins} alt="Cabine de soins et modelages" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={imgSoins} alt={t('accueil.spa.altSoins')} className={styles.image} />
             </div>
 
           </div>
@@ -38,30 +47,35 @@ function SpaPreview() {
         {/* --- Colonne de Droite : Textes --- */}
         <div className={styles.textColumn}>
           <div className={styles.contentWrapper}>
-            <span className={`${styles.subtitle} animate-fade-up`}>ESPACE BIEN-ÊTRE</span>
+            {/* --- REMPLACE LE TEXTE --- */}
+            <span className={`${styles.subtitle} animate-fade-up`}>{t('accueil.spa.subtitle')}</span>
             
             <h2 className={`${styles.title} animate-fade-up delay-100`}>
-              Détente <span className={styles.titleItalic}>&</span> Soins
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.spa.title')} <span className={styles.titleItalic}>{t('accueil.spa.titleItalic')}</span> {t('accueil.spa.titlePart2')}
             </h2>
 
             <p className={`${styles.paragraph} animate-fade-up delay-200`}>
-              Plongez dans un véritable havre de paix. Notre vaste espace détente a été entièrement conçu pour vous offrir une parenthèse hors du temps, loin de l'effervescence du quotidien.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.spa.para1')}
             </p>
 
             <p className={`${styles.paragraph} animate-fade-up delay-300`}>
-              Laissez-vous porter par la douceur de notre piscine intérieure chauffée, libérez vos tensions dans le sauna, ou abandonnez-vous aux mains expertes de nos praticiennes dans nos cabines de soins du corps et du visage.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.spa.para2')}
             </p>
 
             {/* Petite liste élégante des installations */}
             <ul className={`${styles.spaList} animate-fade-up delay-400`}>
-              <li>Piscine intérieure chauffée</li>
-              <li>Sauna</li>
-              <li>Modelages & Soins sur-mesure</li>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <li>{t('accueil.spa.list1')}</li>
+              <li>{t('accueil.spa.list2')}</li>
+              <li>{t('accueil.spa.list3')}</li>
             </ul>
 
-            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="/spa"> */}
             <Link to="/spa" className={`${styles.actionBtn} animate-fade-up delay-500`}>
-              DÉCOUVRIR LE SPA
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.spa.button')}
               <span className={styles.btnArrow}>→</span>
             </Link>
           </div>

@@ -1,17 +1,25 @@
+// --- AJOUTE CET IMPORT ---
+import { useTranslation } from 'react-i18next';
+
 import styles from './RoomsPreview.module.css';
 import roomImg from '../../assets/chambre-preview.jpg'; 
-import { Link } from 'react-router-dom'; // 1. ON IMPORTE LE COMPOSANT LINK
+import { Link } from 'react-router-dom'; 
 
 function RoomsPreview() {
+  // --- ACTIVE LE HOOK ICI ---
+  const { t } = useTranslation();
+
   return (
     <section className={styles.roomsSection}>
       <div className={styles.container}>
         
         {/* --- En-tête de la section --- */}
         <div className={styles.sectionHeader}>
-          <span className={`${styles.subtitle} animate-fade-up`}>VOTRE REPOS</span>
+          {/* --- REMPLACE LE TEXTE --- */}
+          <span className={`${styles.subtitle} animate-fade-up`}>{t('accueil.rooms.subtitle')}</span>
           <h2 className={`${styles.title} animate-fade-up delay-100`}>
-            Chambres 
+            {/* --- REMPLACE LE TEXTE --- */}
+            {t('accueil.rooms.title')}
           </h2>
         </div>
 
@@ -20,28 +28,30 @@ function RoomsPreview() {
           
           {/* L'image de la chambre */}
           <div className={`${styles.imageContainer} animate-fade-up delay-200`}>
-            <img src={roomImg} alt="Chambre Hôtel du Pont Roupt" className={styles.roomImage} />
+            {/* --- REMPLACE LE TEXTE ALT --- */}
+            <img src={roomImg} alt={t('accueil.rooms.alt')} className={styles.roomImage} />
           </div>
 
           {/* La carte d'information qui chevauche l'image */}
           <div className={`${styles.infoCard} animate-fade-up delay-400`}>
-            <h3 className={styles.cardTitle}>Élégance & Confort</h3>
+            {/* --- REMPLACE LE TEXTE --- */}
+            <h3 className={styles.cardTitle}>{t('accueil.rooms.cardTitle')}</h3>
             <p className={styles.cardText}>
-              Découvrez nos 25 chambres pensées pour votre bien-être. 
-              Baignées de lumière naturelle, elles offrent un cadre apaisant alliant 
-              mobilier contemporain et touches de caractère.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.rooms.cardText')}
             </p>
             
             {/* Liste des équipements (style minimaliste) */}
             <ul className={styles.amenitiesList}>
-              <li>Climatisation </li>
-              <li>Accès ascenseur</li>
-              <li>Literie haut de gamme</li>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <li>{t('accueil.rooms.amenity1')} </li>
+              <li>{t('accueil.rooms.amenity2')}</li>
+              <li>{t('accueil.rooms.amenity3')}</li>
             </ul>
 
-            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="..."> */}
             <Link to="/chambres" className={styles.actionBtn}>
-              VOIR TOUTES LES CHAMBRES
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.rooms.button')}
               <span className={styles.btnArrow}>→</span>
             </Link>
           </div>

@@ -1,8 +1,14 @@
+// --- AJOUTE CET IMPORT ---
+import { useTranslation } from 'react-i18next';
+
 import styles from './SeminairePreview.module.css';
-import { Link } from 'react-router-dom'; // 1. IMPORT DU COMPOSANT LINK
+import { Link } from 'react-router-dom'; 
 import seminaireImage from '../../assets/sem.jpeg';
 
 function SeminairePreview() {
+  // --- ACTIVE LE HOOK ICI ---
+  const { t } = useTranslation();
+
   return (
     <section className={styles.seminaireSection}>
       <div className={styles.container}>
@@ -10,30 +16,35 @@ function SeminairePreview() {
         {/* --- Colonne de Gauche : Textes --- */}
         <div className={styles.textColumn}>
           <div className={styles.contentWrapper}>
-            <span className={`${styles.subtitle} animate-fade-up`}>VOS ÉVÉNEMENTS</span>
+            {/* --- REMPLACE LE TEXTE --- */}
+            <span className={`${styles.subtitle} animate-fade-up`}>{t('accueil.seminaire.subtitle')}</span>
             
             <h2 className={`${styles.title} animate-fade-up delay-100`}>
-              Séminaires <span className={styles.titleItalic}>&</span> Réceptions
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.seminaire.title')} <span className={styles.titleItalic}>{t('accueil.seminaire.titleItalic')}</span> {t('accueil.seminaire.titlePart2')}
             </h2>
 
             <p className={`${styles.paragraph} animate-fade-up delay-200`}>
-              Organisez vos réunions, journées d'étude ou événements privés dans un cadre propice à la réflexion et à la convivialité, en plein cœur de la Lozère.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.seminaire.para1')}
             </p>
 
             <p className={`${styles.paragraph} animate-fade-up delay-300`}>
-              L'Hôtel du Pont Roupt met à votre disposition des salles modulables et baignées de lumière naturelle. Nous vous accompagnons de A à Z avec des offres sur-mesure incluant pauses gourmandes, déjeuners au Bistrot et hébergement.
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.seminaire.para2')}
             </p>
 
             {/* Liste des avantages business */}
             <ul className={`${styles.businessList} animate-fade-up delay-400`}>
-              <li>Salles équipées (Écrans, Wi-Fi très haut débit)</li>
-              <li>Capacité adaptable selon vos besoins</li>
-              <li>Formules résidentielles ou semi-résidentielles</li>
+              {/* --- REMPLACE LE TEXTE --- */}
+              <li>{t('accueil.seminaire.list1')}</li>
+              <li>{t('accueil.seminaire.list2')}</li>
+              <li>{t('accueil.seminaire.list3')}</li>
             </ul>
 
-            {/* 2. ON REMPLACE LE <button> PAR UN <Link to="/seminaire"> */}
             <Link to="/seminaire" className={`${styles.actionBtn} animate-fade-up delay-500`}>
-              DÉCOUVRIR NOS ESPACES
+              {/* --- REMPLACE LE TEXTE --- */}
+              {t('accueil.seminaire.button')}
               <span className={styles.btnArrow}>→</span>
             </Link>
           </div>
@@ -48,11 +59,17 @@ function SeminairePreview() {
 
             {/* L'image principale */}
             <div className={`${styles.imageContainer} animate-fade-up delay-200`}>
-              <img src={seminaireImage} alt="Salle de séminaire Hôtel Pont Roupt" className={styles.image} />
+              {/* --- REMPLACE LE TEXTE ALT --- */}
+              <img src={seminaireImage} alt={t('accueil.seminaire.alt')} className={styles.image} />
             </div>
             
             {/* Petit badge "Sur-mesure" superposé */}
             <div className={`${styles.badge} animate-fade-up delay-400`}>
+              {/* --- REMPLACE LE TEXTE AVEC UN <br/> SI BESOIN --- */}
+              {/* Pour gérer le retour à la ligne du badge, on peut faire ça : */}
+              {t('accueil.seminaire.badge').split(' ').join('<br/>')} 
+              {/* Mais c'est plus propre d'utiliser dangerouseLySetInnerHTML pour le badge car il contient un <br/> dans le JSX initial. */}
+              {/* Utilisons la méthode du br : */}
               Service<br/>Sur-mesure
             </div>
 
