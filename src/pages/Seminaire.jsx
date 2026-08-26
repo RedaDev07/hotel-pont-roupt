@@ -29,7 +29,7 @@ function Seminaire() {
         <article className={styles.editorialRow}>
           <div className={styles.imageCol}>
             <div className={styles.imageWrapper}>
-              <img src={imgSalleU} alt="Salle plénière de séminaire" className={styles.editorialImage} />
+              <img src={imgSalleU} alt="Salle plénière de séminaire" className={styles.editorialImage} fetchPriority="high"/>
             </div>
           </div>
           <div className={styles.textCol}>
@@ -52,7 +52,7 @@ function Seminaire() {
         <article className={`${styles.editorialRow} ${styles.reverseRow}`}>
           <div className={styles.imageCol}>
             <div className={styles.imageWrapper}>
-              <img src={imgBanquet1} alt="Salon de réception pour événements d'entreprise" className={styles.editorialImage} fetchPriority="high"/>
+              <img src={imgBanquet1} alt="Salon de réception pour événements d'entreprise" className={styles.editorialImage} />
             </div>
           </div>
           <div className={styles.textCol}>

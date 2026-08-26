@@ -90,6 +90,7 @@
   object-fit: cover;
   object-position: center;
   transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: #F8F5F0;
 }
 
 .imageWrapper:hover .editorialImage {
