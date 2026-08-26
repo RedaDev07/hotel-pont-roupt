@@ -27,7 +27,7 @@ function Bar() {
         <article className={styles.editorialRow}>
           <div className={styles.imageCol}>
             <div className={styles.imageWrapper}>
-              <img src={imgPetitDej} alt="Petit-déjeuner gourmand" className={styles.editorialImage} />
+              <img src={imgPetitDej} alt="Petit-déjeuner gourmand" className={styles.editorialImage} fetchPriority="high"/>
             </div>
           </div>
           <div className={styles.textCol}>
