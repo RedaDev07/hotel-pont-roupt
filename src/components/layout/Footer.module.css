@@ -24,7 +24,7 @@
 
 /* --- Colonne 1 : Marque --- */
 .logo {
-  height: 60px;
+  height: 80px;
   object-fit: contain;
   margin-bottom: 30px;
   transition: opacity 0.3s ease;
@@ -36,7 +36,7 @@
 
 .address {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.8;
   opacity: 0.7;
   margin-bottom: 30px;

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
-import logoBlanc from '../../assets/logo-blanc.png'; // Ton logo en blanc
+import logoBlanc from '../../assets/logo-blanc 1.png'; // Ton logo en blanc
 
 function Footer() {
   return (
