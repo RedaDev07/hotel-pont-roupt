@@ -196,9 +196,9 @@ const resources = {
         detailsTitle: "EN DÉTAILS",
         backLink: "voir les autres chambres",
         bookLink: "RÉSERVER CETTE CHAMBRE",
-        wifiFree: "WIFI gratuit",
-        wifiFreeHigh: "WIFI gratuit haut débit",
-        wifiMinibar: "WIFI gratuit & Minibar",
+        wifiFree: "WIFI haut débit",
+        wifiFreeHigh: "WIFI haut débit",
+        wifiMinibar: "WIFI haut débit",
         wifiHautDebit: "WIFI haut débit", // NOUVEAU
         r1_descLong: "Leur large fenêtre donne soit sur le soleil levant ou la lumière du couchant, mais toutes tiennent la promesse d'un confort de cocon feutré, de détails judicieusement pensés et d'une élégance clairement intemporelle.",
         r1_size: "14 m²",
