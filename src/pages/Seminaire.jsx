@@ -3,7 +3,6 @@ import styles from './Seminaire.module.css';
 // Remplace par les bons chemins vers tes images dans ton dossier assets
 import imgSalleU from '../assets/sem.jpeg'; // La grande table en U
 import imgBanquet1 from '../assets/Hotel Pont Roupt-046.jpg'; // Salle lumineuse avec tables rondes
-import imgBanquet2 from '../assets/Hotel Pont Roupt-045.jpg'; // Vue globale salle de restauration / pause
 
 function Seminaire() {
   return (

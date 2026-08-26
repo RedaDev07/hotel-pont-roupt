@@ -75,7 +75,7 @@
   text-align: justify; /* Justifié pour l'effet livre/magazine */
 }
 
-/* Le bouton ultra chic */
+/* Le bouton ultra chic corrigé */
 .actionBtn {
   background: transparent;
   border: none;
@@ -85,13 +85,21 @@
   letter-spacing: 3px;
   color: #2C3E50;
   cursor: pointer;
-  display: flex;
+  
+  /* Flexbox pour aligner le texte et la flèche */
+  display: inline-flex; 
   align-items: center;
   gap: 15px;
+  width: fit-content; /* INDISPENSABLE : la ligne s'arrête juste après la flèche */
+  
   margin-top: 40px;
   padding: 0;
-  border-bottom: 1px solid rgba(44, 62, 80, 0.3);
-  padding-bottom: 8px;
+  
+  /* LA SOLUTION EST ICI 👇 */
+  text-decoration: none; /* Supprime le vieux soulignement collé au texte */
+  border-bottom: 1px solid rgba(44, 62, 80, 0.3); /* La belle ligne grise */
+  padding-bottom: 8px; /* L'espace entre le texte et la ligne grise */
+  
   transition: all 0.3s ease;
 }
 
@@ -103,12 +111,13 @@
 
 .actionBtn:hover {
   color: #FF8500;
-  border-bottom-color: #FF8500;
+  border-bottom-color: #FF8500; /* La ligne devient orange au survol */
 }
 
 .actionBtn:hover .btnArrow {
   transform: translateX(8px); /* La flèche avance au survol */
 }
+
 
 /* =========================================
    COLONNE GALERIE DOUBLE IMAGE (DROITE)

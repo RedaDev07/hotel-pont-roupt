@@ -11,7 +11,7 @@ function RoomsPreview() {
         <div className={styles.sectionHeader}>
           <span className={`${styles.subtitle} animate-fade-up`}>VOTRE REPOS</span>
           <h2 className={`${styles.title} animate-fade-up delay-100`}>
-            Chambres <span className={styles.titleItalic}>&</span> Suites
+            Chambres 
           </h2>
         </div>
 

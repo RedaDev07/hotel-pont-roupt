@@ -3,10 +3,27 @@ import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './ChambreDetail.module.css';
 
-// Tes images
+// --- IMAGES DE BASE ---
 import imgChambre1 from '../assets/Hotel Pont Roupt-072.jpg'; 
-import imgChambre2 from '../assets/Hotel Pont Roupt-016.jpg';
-import imgChambre3 from '../assets/Hotel Pont Roupt-015.jpg';
+import imgChambre2 from '../assets/Hotel Pont Roupt-016.jpg'; 
+import imgChambre3 from '../assets/Hotel Pont Roupt-015.jpg'; // Première image Supérieure
+
+// --- IMAGES GALERIE CHAMBRE STANDARD (ID: 1) ---
+import imgStandard2 from '../assets/1-51.jpg';
+import imgStandard3 from '../assets/chambre-preview.jpg';
+import imgStandard4 from '../assets/Hotel Pont Roupt-007.jpg';
+import imgStandard5 from '../assets/Hotel Pont Roupt-074.jpg';
+
+// --- IMAGES GALERIE CHAMBRE CONFORT (ID: 2) ---
+import imgConfort2 from '../assets/1-47.jpg';
+import imgConfort3 from '../assets/Hotel Pont Roupt-011.jpg';
+
+// --- NOUVELLES IMAGES GALERIE CHAMBRE SUPÉRIEURE (ID: 3) ---
+import imgSup2 from '../assets/chambre3.webp';
+import imgSup3 from '../assets/hero.webp';
+import imgSup4 from '../assets/hero-2.webp';
+import imgSup5 from '../assets/Hotel Pont Roupt-032.jpg';
+import imgSup6 from '../assets/Hotel Pont Roupt-034.jpg';
 
 function ChambreDetail() {
   const { id } = useParams();
@@ -24,7 +41,7 @@ function ChambreDetail() {
       capacity: t('chambresDetail.r1_cap'),
       bed: t('chambresDetail.r1_bedLong'),
       wifi: t('chambresDetail.wifiFree'),
-      images: [imgChambre1, imgChambre2, imgChambre3], 
+      images: [imgChambre1, imgStandard2, imgStandard3, imgStandard4, imgStandard5], 
     },
     {
       id: "2",
@@ -34,7 +51,7 @@ function ChambreDetail() {
       capacity: t('chambresDetail.r2_cap'),
       bed: t('chambresDetail.r2_bedLong'),
       wifi: t('chambresDetail.wifiFreeHigh'),
-      images: [imgChambre2, imgChambre1, imgChambre3],
+      images: [imgChambre2, imgConfort2, imgConfort3], 
     },
     {
       id: "3",
@@ -44,7 +61,8 @@ function ChambreDetail() {
       capacity: t('chambresDetail.r3_cap'),
       bed: t('chambresDetail.r3_bedLong'),
       wifi: t('chambresDetail.wifiMinibar'),
-      images: [imgChambre3, imgChambre2, imgChambre1],
+      // Mise à jour de la galerie Supérieure avec les 6 photos
+      images: [imgChambre3, imgSup6, imgSup5, imgSup4, imgSup3, imgSup2],
     }
   ];
 
@@ -96,7 +114,7 @@ function ChambreDetail() {
             
             <div className={styles.detailsGrid}>
               
-              {/* 1. Capacité (Personnes) */}
+              {/* 1. Capacité */}
               <div className={styles.detailItem}>
                 <svg className={styles.customIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
@@ -104,7 +122,7 @@ function ChambreDetail() {
                 <span>{room.capacity}</span>
               </div>
 
-              {/* 2. Superficie (Carré) */}
+              {/* 2. Superficie */}
               <div className={styles.detailItem}>
                 <svg className={styles.customIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="5" y="5" width="14" height="14" rx="1" strokeLinecap="round" strokeLinejoin="round"/>
@@ -116,7 +134,7 @@ function ChambreDetail() {
                 <span>{room.size}</span>
               </div>
 
-              {/* 3. Literie (Lit) */}
+              {/* 3. Literie */}
               <div className={styles.detailItem}>
                 <svg className={styles.customIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10M3 14h18m0-7v10m-18-7h18M6 10h3v4H6z" />
@@ -124,7 +142,7 @@ function ChambreDetail() {
                 <span>{room.bed}</span>
               </div>
 
-              {/* 4. Wifi (Onde) */}
+              {/* 4. Wifi */}
               <div className={styles.detailItem}>
                 <svg className={styles.customIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12 18.75h.008v.008H12v-.008z" />

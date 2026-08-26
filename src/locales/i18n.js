@@ -37,7 +37,7 @@ const resources = {
         ecoTag: "TOURISME DURABLE & ENGAGÉ",
         ecoActive: "Engagement actif",
         ecoTitle: "L’Élégance d'un Séjour Éco-Responsable",
-        ecoDesc: "Soucieux de préserver notre exceptionnel terroir de Lozère, l'Hôtel du Pont Roupt s'engage quotidiennement dans une démarche respectueuse de l'environnement, certifiée par le prestigieux label international Clef Verte.",
+        ecoDesc: "Soucieux de préserver notre exceptionnel terroir de Lozère, l'Hôtel du Pont Roupt s'engage quotidiennement dans une démarche respectueuse de l'environnement, certifiée par le prestigioso label international Clef Verte.",
         pillCircuit: "Gastronomie en Circuit Court",
         pillWater: "Gestion Raisonnée de l'Eau",
         pillEnergy: "Énergie Propre & Durable"
@@ -199,6 +199,7 @@ const resources = {
         wifiFree: "WIFI gratuit",
         wifiFreeHigh: "WIFI gratuit haut débit",
         wifiMinibar: "WIFI gratuit & Minibar",
+        wifiHautDebit: "WIFI haut débit", // NOUVEAU
         r1_descLong: "Leur large fenêtre donne soit sur le soleil levant ou la lumière du couchant, mais toutes tiennent la promesse d'un confort de cocon feutré, de détails judicieusement pensés et d'une élégance clairement intemporelle.",
         r1_size: "14 m²",
         r1_cap: "2 personnes max",
@@ -210,7 +211,7 @@ const resources = {
         r3_descLong: "Nos meilleures chambres et les plus spacieuses. Laissez-vous séduire par l'élégance de ces espaces généreux, idéals pour les longs séjours et les moments de pure détente.",
         r3_size: "20 m²",
         r3_cap: "3 personnes max",
-        r3_bedLong: "1 Lit 180x200 cm"
+        r3_bedLong: "1 Lit 180x200 cm ou 2 Lits 90x200 cm" // MODIFIÉ
       },
 
       // -- PAGE BONS CADEAUX --
@@ -426,6 +427,7 @@ const resources = {
         wifiFree: "Free WIFI",
         wifiFreeHigh: "Free High-Speed WIFI",
         wifiMinibar: "Free WIFI & Minibar",
+        wifiHautDebit: "High-speed WIFI", // NOUVEAU
         r1_descLong: "Their large windows open to either the sunrise or the sunset light, but all hold the promise of a cozy cocoon comfort, thoughtfully designed details, and timeless elegance.",
         r1_size: "14 m²",
         r1_cap: "2 guests max",
@@ -437,7 +439,7 @@ const resources = {
         r3_descLong: "Our best and most spacious rooms. Let yourself be seduced by the elegance of these generous spaces, ideal for long stays and pure relaxation.",
         r3_size: "20 m²",
         r3_cap: "3 guests max",
-        r3_bedLong: "1 Bed 180x200 cm"
+        r3_bedLong: "1 King size bed (180x200) or 2 Single beds (90x200)" // MODIFIÉ
       },
 
       // -- PAGE BONS CADEAUX --
@@ -653,6 +655,7 @@ const resources = {
         wifiFree: "WIFI gratuito",
         wifiFreeHigh: "WIFI gratuito alta velocidad",
         wifiMinibar: "WIFI gratuito y Minibar",
+        wifiHautDebit: "WIFI de alta velocidad", // NOUVEAU
         r1_descLong: "Sus grandes ventanas dan al sol naciente o a la luz del poniente, pero todas cumplen la promesa de un confort acogedor, detalles cuidadosamente pensados y una elegancia atemporal.",
         r1_size: "14 m²",
         r1_cap: "2 personas máx",
@@ -664,7 +667,7 @@ const resources = {
         r3_descLong: "Nuestras mejores y más amplias habitaciones. Déjese seducir por la elegancia de estos generosos espacios, ideales para estancias largas y pura relajación.",
         r3_size: "20 m²",
         r3_cap: "3 personas máx",
-        r3_bedLong: "1 Cama 180x200 cm"
+        r3_bedLong: "1 Cama King (180x200) o 2 Camas individuales (90x200)" // MODIFIÉ
       },
 
       // -- PAGE BONS CADEAUX --

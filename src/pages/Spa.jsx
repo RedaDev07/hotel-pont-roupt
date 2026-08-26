@@ -1,7 +1,7 @@
 import styles from './Spa.module.css';
 
 // Remplace par tes vrais chemins dans ton dossier assets
-import imgPiscine from '../assets/piscine1.jpg'; // Piscine & Aquabikes
+import imgPiscine from '../assets/piscine1.jpg'; // Piscine 
 import imgSoins from '../assets/spa-soins.webp';     // Cabine de massage feutrée
 
 function Spa() {
@@ -31,12 +31,11 @@ function Spa() {
           </div>
           <div className={styles.textCol}>
             <span className={styles.tag}>ESPACE AQUATIQUE</span>
-            <h2 className={styles.rowTitle}>Piscine couverte chauffée & Aquabikes</h2>
+            <h2 className={styles.rowTitle}>Piscine couverte chauffée</h2>
             <p className={styles.rowDesc}>
               Baignée de lumière, notre piscine intérieure chauffée vous accueille tout au long de 
-              l'année pour un instant de détente absolue. Pour les amateurs de dynamisme, des vélos 
-              d'aquabiking sont à votre disposition au bord du bassin pour allier sport et relaxation 
-              en toute liberté.
+              l'année pour un instant de détente absolue. Profitez d'un bassin paisible pour vous 
+              ressourcer et relâcher les tensions en toute liberté.
             </p>
             <div className={styles.featuresList}>
               <div className={styles.featureBadge}>Piscine chauffée</div>
@@ -106,7 +105,7 @@ function Spa() {
         </div>
       </section>
 
-      {/* 4. ENCADRÉ DE CONTACT / RÉSERVATION DE SOIN (FOND #2C3E50 + BOUTONS ORANGE) */}
+      {/* 4. ENCADRÉ DE CONTACT / RÉSERVATION DE SOIN */}
       <section className={styles.contactSection}>
         <div className={styles.contactCard}>
           <span className={styles.surtitle}>RÉSERVEZ VOTRE MOMENT DE DÉTENTE</span>

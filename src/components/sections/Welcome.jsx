@@ -1,4 +1,5 @@
 import styles from './Welcome.module.css';
+import { Link } from 'react-router-dom';
 import mainImg from '../../assets/hotel.jpg'; 
 // Prépare une 2ème photo de détail (ex: un zoom sur un élément du salon, un verre, etc.)
 import detailImg from '../../assets/maison-detail.jpg'; 
@@ -33,10 +34,10 @@ function Welcome() {
               L'hôtel propose 25 chambres confortables et bien équipées (la plupart sont climatisées et accessibles avec ascenseur), un bistrot bar à vin pour des moments de convivialité, des salles de réunion et un vaste espace de détente avec piscine intérieure, sauna, jacuzzi, cabines de soins.
             </p>
 
-            <button className={`${styles.actionBtn} animate-fade-up delay-500`}>
+            <Link to="/chambres" className={`${styles.actionBtn} animate-fade-up delay-500`}>
               DÉCOUVRIR L'HÔTEL
               <span className={styles.btnArrow}>→</span>
-            </button>
+            </Link>
           </div>
         </div>
 
